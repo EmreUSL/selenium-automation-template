@@ -81,6 +81,7 @@ This approach:
 
 This framework uses a layered and type-safe configuration system to keep environment-specific values out of test code and support scalable, CI/CD-friendly execution.
 
+```text
 📂 Structure
 src/main/java
  └── config
@@ -91,21 +92,24 @@ src/main/java
 src/test/resources
  └── config
      └── config.properties
+```
 
-🧩 config.properties
+## 🧩 config.properties
+
+```text
 browser=chrome
 baseUrl=https://example.com
 headless=false
-
+```
 
 All environment-related values are managed from a single place.
 
-## 📖 ConfigReader
+## 📖 ConfigReader
 
 Loads config.properties once at startup and provides raw values.
 Fails fast if the file or a key is missing.
 
-## 🗝 ConfigKeys
+## 🗝 ConfigKeys
 
 Defines all allowed configuration keys using enums to avoid magic strings and typos.
 
@@ -118,8 +122,10 @@ BrowserType browser = ConfigurationManager.getBrowser();
 String baseUrl = ConfigurationManager.getBaseUrl();
 boolean headless = ConfigurationManager.isHeadless();
 
-## 🔄 Configuration Flow
+## 🔄 Configuration Flow
+```text
 config.properties → ConfigReader → ConfigurationManager → Framework Components
+```
 
 ## ✅ Benefits
 
