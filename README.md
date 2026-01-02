@@ -113,7 +113,7 @@ Fails fast if the file or a key is missing.
 
 Defines all allowed configuration keys using enums to avoid magic strings and typos.
 
-## 🧠 ConfigurationManager
+## 🧠 ConfigurationManager
 
 Acts as a single entry point for accessing configuration values across the framework.
 Handles type conversion (enum, boolean) and validation.
