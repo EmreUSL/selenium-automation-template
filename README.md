@@ -118,9 +118,11 @@ Defines all allowed configuration keys using enums to avoid magic strings and ty
 Acts as a single entry point for accessing configuration values across the framework.
 Handles type conversion (enum, boolean) and validation.
 
+```text
 BrowserType browser = ConfigurationManager.getBrowser();
 String baseUrl = ConfigurationManager.getBaseUrl();
 boolean headless = ConfigurationManager.isHeadless();
+```
 
 ## 🔄 Configuration Flow
 ```text
@@ -129,10 +131,10 @@ config.properties → ConfigReader → ConfigurationManager → Framework Compon
 
 ## ✅ Benefits
 
-No hard-coded values in tests
+- No hard-coded values in tests
 
-Type-safe and centralized configuration
+- Type-safe and centralized configuration
 
-Easy environment and browser switching
+- Easy environment and browser switching
 
-CI/CD ready
+- CI/CD ready
