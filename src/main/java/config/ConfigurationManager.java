@@ -1,10 +1,6 @@
 package config;
 
 import core.driver.BrowserType;
-import io.opentelemetry.sdk.autoconfigure.spi.ConfigProperties;
-
-import java.io.InputStream;
-import java.util.Properties;
 
 public class ConfigurationManager {
 
@@ -23,8 +19,8 @@ public class ConfigurationManager {
         return Boolean.parseBoolean(ConfigReader.get(ConfigKeys.HEADLESS.getKey()));
     }
 
-    public static String getName() {
-        return ConfigReader.get(ConfigKeys.NAME.getKey());
+    public static String getUserName() {
+        return ConfigReader.get(ConfigKeys.USERNAME.getKey());
     }
 
     public static String getPassword() {
