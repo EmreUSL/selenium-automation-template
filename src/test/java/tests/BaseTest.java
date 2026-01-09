@@ -1,18 +1,16 @@
 package tests;
-
-import assertions.AssertActions;
 import assertions.VerifyActions;
 import config.ConfigurationManager;
 import core.driver.DriverManager;
-import core.listener.TestListener;
+import core.listener.AllureListener;
 import org.testng.annotations.*;
 
-@Listeners(TestListener.class)
+@Listeners(AllureListener.class)
 public abstract class BaseTest {
 
     @BeforeMethod
     void setUp() {
-        DriverManager.initDriver();
+       // DriverManager.initDriver();
         DriverManager.getDriver().get(ConfigurationManager.getBaseUrl());
     }
 
